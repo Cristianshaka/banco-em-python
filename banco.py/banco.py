@@ -16,9 +16,10 @@ while True:
 
     if opcao == "d":
         print("Depósito")
-        valor = int(input("Digite um valor: "))
-        valor += saldo
-        print("Transdação completa")
+        valor = float(input("Digite um valor: "))
+        if valor > 0:
+            saldo += valor
+            print("Transação completa")
 
     elif opcao == "s":
         print("Sacar")
